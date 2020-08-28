@@ -29,7 +29,13 @@ export class TasksService {
         return task;
     }
 
-    deleteTaskById(id: string): void {
+    deleteTask(id: string): void {
         this.tasks = this.tasks.filter(task => task.id !== id); // filters out ids that returns false 
+    }
+
+    updateTask(id: string, status: TaskStatus): Task {
+        let task = this.getTaskById(id);
+        task.status = status;
+        return task;
     }
 }
