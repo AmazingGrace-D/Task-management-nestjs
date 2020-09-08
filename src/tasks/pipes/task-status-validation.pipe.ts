@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { PipeTransform, BadRequestException } from "@nestjs/common";
 import { TaskStatus } from "../task.model";
 

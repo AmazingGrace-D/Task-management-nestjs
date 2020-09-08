@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Task, TaskStatus } from './task.model';
 import { v1 as uuidv1 } from 'uuid';
@@ -59,7 +60,7 @@ export class TasksService {
     }
 
     updateTask(id: string, status: TaskStatus): Task {
-        let task = this.getTaskById(id);
+        const task = this.getTaskById(id);
         task.status = status;
         return task;
     }
