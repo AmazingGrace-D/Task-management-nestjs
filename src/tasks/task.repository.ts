@@ -3,7 +3,6 @@ import { CreateTaskDto } from "./dtos/create-task.dto";
 import { GetTaskFilterDto } from "./dtos/get-task-filter.dto";
 import { TaskStatus } from "./task-status.enum";
 import { Task } from "./task.entity";
-import { TasksService } from "./tasks.service";
 
 @EntityRepository(Task)
 export class TaskRepository extends Repository<Task> {
